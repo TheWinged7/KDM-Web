@@ -4,11 +4,13 @@
 <head>
     <meta http-equiv="Content-type" content="text/html" ; charset="utf-8">
     <title>KDM Web test page</title>
-    <script type="text/javascript" charset="utf-8">
 
-        var canvas = document.getElementById("testcanvas");
-        var context = canvas.getContext("2d");
-        var gridBG = document.getElementById("gridBG");
+    <script type="text/javascript" charset="utf-8" src="../js/square.js" />
+
+    <script type="text/javascript" charset="utf-8">
+        var canvas;
+        var context;
+        var gridBG;
         function demoPrint() {
             context.strokeStyle = "white";
             context.fillStyle = "blue";
@@ -42,9 +44,12 @@
 
             context.drawImage(gridBG, 0, 0, 1200, 872.25);
 
-
-            demoPrint();
+            test = new square(5, 0, ["one", "two", "three"], "all", false, null);
+            test.x = 9;
+            test.getSummary();
+            // demoPrint();
         }
+
 
 
     </script>
