@@ -13,6 +13,14 @@
                 var y = this.y;
                 return `(${x},${y})`;
             }
+            
+            pushEffects(e){
+                this.effects = this.effects.concat(e);
+            }
+
+            popEffects(e){
+                this.effects = this.effects.filter(value => !e.includes(value));
+            }
 
             getSummary() {
                 var coords = this.getCoords();
