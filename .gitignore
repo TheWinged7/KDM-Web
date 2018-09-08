@@ -79,3 +79,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+.gitlab-ci.yml
+Ftp TheWinged7@kingdomdeath.online.xml
